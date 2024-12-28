@@ -1,72 +1,246 @@
-body{
-    font-family: Arial, sans-serif;
+/* Resetando margens e padding padrões */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo uma fonte padrão para o site */
+body {
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    color: #333;
+    background-color: #e1f5fe; /* Azul claro suave */
 }
 
-.container{
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+/* Container geral para alinhar o conteúdo */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-header{
-    background: #333;
+/* Estilo do cabeçalho */
+header {
+    background-color: #0277bd; /* Azul oceânico */
+    padding: 20px 0;
     color: #fff;
-    padding: 10px 0;
 }
 
-header h1{
+header h1 {
     text-align: center;
+    font-size: 2.5rem;
 }
 
-header nav ul{
+nav ul {
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
+    margin-top: 10px;
 }
 
-header nav ul li{
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px;
 }
 
-header nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-.banner{
-    background: #007BFF;
+nav ul li a:hover {
+    color: #81d4fa; /* Azul claro de destaque */
+}
+
+/* Estilo da seção banner */
+.banner {
+    background: url('img/projeto1.jpg') no-repeat center center/cover;
+    padding: 80px 0;
+    text-align: center;
     color: #fff;
-    padding: 50px 0;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banner .btn {
+    background-color: #00bcd4; /* Azul vibrante para o botão */
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: #0097a7; /* Azul mais escuro */
+}
+
+/* Estilo da seção serviços */
+#services {
+    background-color: #fff;
+    padding: 60px 0;
     text-align: center;
 }
 
-.btn{
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0277bd;
 }
 
-section{
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services-item {
+    width: 30%;
+    background-color: #b3e5fc; /* Azul claro para os itens */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.services-item:hover {
+    transform: translateY(-10px);
+}
+
+.services-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #0277bd;
+}
+
+.services-item p {
+    font-size: 1rem;
+    color: #0288d1; /* Azul escuro */
+}
+
+/* Estilo da seção portfólio */
+#portfolio {
+    background-color: #e1f5fe;
+    padding: 60px 0;
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0277bd;
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.portfolio-item p {
+    padding: 20px;
+    font-size: 1rem;
+    color: #0288d1;
+}
+
+/* Estilo da seção de contato */
+#contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0277bd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #0277bd;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #01579b; /* Azul mais escuro */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0277bd;
+    color: #fff;
+    text-align: center;
     padding: 20px 0;
 }
 
-.services-list, .portfolio-item{
-    flex: 1;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-footer{
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+footer p {
+    font-size: 1rem;
 }
