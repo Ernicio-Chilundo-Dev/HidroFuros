@@ -40,6 +40,7 @@ nav ul {
 
 nav ul li {
     margin: 0 20px;
+    list-style-type: none;
 }
 
 nav ul li a {
